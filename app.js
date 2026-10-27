@@ -1,4 +1,10 @@
 'use strict';
+const favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.type = 'image/svg+xml';
+favicon.sizes = 'any';
+favicon.href = new URL('favicon.svg?v=1', document.baseURI).href;
+document.head.appendChild(favicon);
 const menu = document.getElementById('menu');
 const navigation = document.getElementById('navigation');
 function closeMenu() { navigation.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }
